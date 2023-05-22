@@ -1,0 +1,58 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: #d5e0d8;
+}
+
+.formulario {
+	margin: 0 auto;
+	padding-top: 2rem;
+	max-width: 60rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1rem;
+}
+
+.campos {
+	display: flex;
+	flex-direction: column;
+	width: 40rem;
+	background: rgb(20, 41, 55);
+	background: linear-gradient(
+		90deg,
+		rgba(20, 41, 55, 1) 0%,
+		rgba(175, 193, 198, 1) 100%
+	);
+	color: #fff;
+	margin: 1rem;
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+label {
+	margin-bottom: 1rem;
+}
+input {
+	padding: 0.5rem;
+}
+
+button {
+	font-size: 2rem;
+	padding: 0.5rem;
+	border: none;
+	cursor: pointer;
+}
+
+.radio label {
+	margin-inline: 4rem;
+}
