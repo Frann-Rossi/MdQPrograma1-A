@@ -1,0 +1,78 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background-image: url(../img/pexels-vincent-rivaud-2471171.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	font-size: 1.6rem;
+}
+
+.header {
+	height: 5rem;
+	background-color: #000;
+}
+
+.nav {
+	height: 100%;
+	font-size: 3rem;
+	text-transform: uppercase;
+	display: flex;
+}
+
+.enlace {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	margin-inline: 2rem;
+}
+
+.enlace:hover {
+	background-color: #d4d4d4;
+	color: #000;
+}
+
+.main {
+	color: #fff;
+	text-transform: uppercase;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-texto {
+	background-color: rgba(0, 0, 0, 50%);
+	border-radius: 1rem;
+	padding-inline: 1rem;
+	text-align: center;
+}
+
+.section {
+	color: #fff;
+	background-color: #000;
+	margin: 0 0 2rem 2rem;
+	text-transform: uppercase;
+	padding: 1rem;
+	display: inline-block;
+}
+
+.footer {
+	height: 5rem;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding-block: 1rem;
+}
+.footer h1 {
+	margin: 0;
+}
