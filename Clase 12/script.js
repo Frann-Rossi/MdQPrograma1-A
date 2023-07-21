@@ -1,6 +1,11 @@
 function mayorMenor() {
-	const numeroUno = parseInt(prompt("Ingrese el PRIMER numero"));
-	const numeroDos = parseInt(prompt("Ingrese el SEGUNDO numero"));
+	let numeroUno, numeroDos;
+	do {
+		numeroUno = parseInt(prompt("Ingrese el PRIMER numero"));
+	} while (isNaN(numeroUno));
+	do {
+		numeroDos = parseInt(prompt("Ingrese el SEGUNDO numero"));
+	} while (isNaN(numeroDos));
 
 	const respuesta1 = document.querySelector("#respuesta1");
 
@@ -14,9 +19,13 @@ function mayorMenor() {
 }
 
 function parImpar() {
+	let numeroUsuario;
+	do {
+		numeroUsuario = parseInt(prompt("Escriba el numero que quiera"));
+	} while (isNaN(numeroUsuario));
+
 	const respuesta2 = document.querySelector("#respuesta2");
 
-	const numeroUsuario = prompt("Escriba el numero que quiera");
 	const numero = parseInt(numeroUsuario);
 	if (numero % 2 === 0) {
 		respuesta2.textContent = `Es PAR ${numero}`;
@@ -26,9 +35,13 @@ function parImpar() {
 }
 
 function mostrarOperacion(operador) {
-	const numeroUno = parseInt(prompt("Ingrese el PRIMER numero"));
-	const numeroDos = parseInt(prompt("Ingrese el SEGUNDO numero"));
-
+	let numeroUno, numeroDos;
+	do {
+		numeroUno = parseInt(prompt("Ingrese el PRIMER numero"));
+	} while (isNaN(numeroUno));
+	do {
+		numeroDos = parseInt(prompt("Ingrese el SEGUNDO numero"));
+	} while (isNaN(numeroDos));
 	const respuesta3 = document.querySelector("#respuesta3");
 
 	const resultadoSuma = numeroUno + numeroDos;
