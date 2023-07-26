@@ -145,3 +145,75 @@ function tablaDividir() {
 
 	tabla.innerHTML = tablaHTML;
 }
+
+function mostrarOperacionTabla(operador) {
+	let numero;
+
+	do {
+		numero = parseInt(
+			prompt(
+				"Ingrese un número para generar una tabla de Sumar, Restar, Multiplicar o Dividir "
+			)
+		);
+	} while (isNaN(numero) || numero <= 0);
+
+	const tabla = document.querySelector("#respuesta7");
+	tabla.innerHTML = ""; // Limpiamos la tabla por si hay datos anteriores.
+
+	// Creamos la cabecera de la tabla
+	let tablaHTML = "<tr><th>Operando</th> <th>Resultado</th></tr>";
+
+	const resultadoSuma = () => {
+		// Generamos los resultados de la suma y los agregamos a la tabla
+		for (let sumando = 1; sumando <= 10; sumando++) {
+			const resultado = numero + sumando;
+			tablaHTML += `<tr><td><br>${numero} + ${sumando} =</td><td> ${resultado}</td></tr>`;
+		}
+		tabla.innerHTML = tablaHTML;
+	};
+
+	const resultadoResta = () => {
+		// Generamos los resultados de la resta y los agregamos a la tabla
+		for (let restando = 1; restando <= 10; restando++) {
+			const resultado = numero - restando;
+			tablaHTML += `<tr><td><br>${numero} - ${restando} =</td><td> ${resultado}</td></tr>`;
+		}
+		tabla.innerHTML = tablaHTML;
+	};
+
+	const resultadoMultiplicacion = () => {
+		// Generamos los múltiplos y los agregamos a la tabla
+		for (let multiplicador = 1; multiplicador <= 10; multiplicador++) {
+			const resultado = numero * multiplicador;
+			tablaHTML += `<tr><td><br>${numero} x ${multiplicador} =</td><td> ${resultado}</td></tr>`;
+		}
+		tabla.innerHTML = tablaHTML;
+	};
+
+	const resultadoDivision = () => {
+		// Generamos los resultados de la división y los agregamos a la tabla
+		for (let divisor = 1; divisor <= 10; divisor++) {
+			const resultado = numero / divisor;
+			tablaHTML += `<tr><td><br>${numero} / ${divisor} =</td><td> ${resultado}</td></tr>`;
+		}
+		tabla.innerHTML = tablaHTML;
+	};
+
+	switch (operador) {
+		case "+":
+			resultadoSuma();
+			break;
+
+		case "-":
+			resultadoResta();
+			break;
+
+		case "*":
+			resultadoMultiplicacion();
+			break;
+
+		case "/":
+			resultadoDivision();
+			break;
+	}
+}
